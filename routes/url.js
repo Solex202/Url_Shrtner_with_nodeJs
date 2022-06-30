@@ -4,14 +4,14 @@ const validUrl = require('valid-url');
 const shortid = require('shortid');
 const config = require('config');
 
-const Url = require('../models/Url')
+const Url = require('../models/Url');
 
 //@route POST /api/url/shorten
 //@desc Create short URL
 
-router.post('/shorten' , (req, res) => {
+router.post('/shorten', async (req, res) => {
     const {longUrl} = req.body;
-    const baseUrl = config.get('baseUrl')
+    const baseUrl = config.get('baseUrl');
 
     if(!validUrl.isUri(baseUrl)){
         return res.status(401).json('invalid base uri')
@@ -37,7 +37,7 @@ router.post('/shorten' , (req, res) => {
 
                 await url.save();
 
-                res.json(url);
+                res.json(url); 
             }
         } catch (error) {
             console.error(error);
