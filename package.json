@@ -1,0 +1,22 @@
+{
+  "name": "url_shortner",
+  "version": "1.0.0",
+  "description": "learning_node",
+  "main": "index.js",
+  "scripts": {
+    "start": "node index",
+    "dev": "nodemon index"
+  },
+  "author": "lotachi",
+  "license": "ISC",
+  "dependencies": {
+    "config": "^3.3.7",
+    "express": "^4.18.1",
+    "mongoose": "^6.4.1",
+    "shortid": "^2.2.16",
+    "valid-url": "^1.0.9"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.18"
+  }
+}
