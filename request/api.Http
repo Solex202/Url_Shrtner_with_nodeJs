@@ -1,0 +1,6 @@
+POST http://localhost:5000/api/url/shorten
+Content-Type: application/application/json
+
+{
+    "longUrl": "https://www.monsterindia.com/zuno/register?utm_source=telegram&utm_medium=training_internship&utm_campaign=yash&utm_id=zuno_tg"
+}
